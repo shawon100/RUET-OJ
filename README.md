@@ -24,7 +24,7 @@ HTML, CSS, BootStrap, JavaScript
 
 ## BackEnd 
 
-PHP, SQL
+PHP, MySQL
 
 
 # Judge Languages
