@@ -61,7 +61,7 @@ Import SQL Files From dbs Folder .
 
 ```
 
-#Set Up Conncection
+# Set Up Conncection
 ```
 If you are using localhost then change configuration of config.php to
 
