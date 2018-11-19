@@ -60,3 +60,15 @@ sudo apt install openjdk-8-jre
 Import SQL Files From dbs Folder .
 
 ```
+
+#Set Up Conncection
+```
+If you are using localhost then change configuration of config.php to
+
+$host="localhost";
+$user="root";
+$pass="";
+$db="reg";
+
+```
+
