@@ -74,3 +74,6 @@ $db="reg";
 # More
 There is a windows version of this online judge with partial features. 
 https://github.com/shawon100/RUET-Virtual-Lab
+
+# Request
+This online judge project is for learning purpose. Do not use it for commercial purpose. If you modify credits of footer, then add this github repository link to footer.
