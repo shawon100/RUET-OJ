@@ -678,7 +678,7 @@ if(isset($_GET['name']))
 
 
       $i++;
-      $demo="demo"+"$i";
+      $demo="demo".$i;
       $nr=mysqli_fetch_array($sq4);
       $nm=mysqli_fetch_array($sq5);
       $ns=mysqli_fetch_array($sq6);
