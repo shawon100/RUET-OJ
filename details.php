@@ -294,7 +294,7 @@ echo("Problem Name: $r1[pbname]<br><br> Problem ID: $r1[pbid]<br><br>Time Limit:
 
 
       $i++;
-      $demo="demo"+"$i";
+      $demo="demo".$i;
       $nr=mysqli_fetch_array($sq4);
       $nm=mysqli_fetch_array($sq5);
       $ns=mysqli_fetch_array($sq6);
@@ -456,7 +456,7 @@ echo("Problem Name: $r1[pbname]<br><br> Problem ID: $r1[pbid]<br><br>Time Limit:
 
 
       $i++;
-      $demo="demo"+"$i";
+      $demo="demo".$i;
       $nr=mysqli_fetch_array($sq4);
       $nm=mysqli_fetch_array($sq5);
       $ns=mysqli_fetch_array($sq6);
@@ -613,7 +613,7 @@ $cnt=$r1['cname'];
 
 
       $i++;
-      $demo="demo"+"$i";
+      $demo="demo".$i;
       $nr=mysqli_fetch_array($sq4);
       $nm=mysqli_fetch_array($sq5);
       $ns=mysqli_fetch_array($sq6);
