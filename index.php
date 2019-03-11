@@ -265,7 +265,7 @@ $q3="SELECT * FROM rapl_oj_contest ORDER BY date_on DESC LIMIT 0,2";
 
 
       $i++;
-      $demo="demo"+"$i";
+      $demo="demo".$i;
       $nr=mysqli_fetch_array($sq4);
       $nm=mysqli_fetch_array($sq5);
       $ns=mysqli_fetch_array($sq6);
