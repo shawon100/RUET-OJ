@@ -242,7 +242,7 @@ $sq3=mysqli_query($con,$q3);
 
 
       $i++;
-      $demo="demo"+"$i";
+      $demo="demo".$i;
       $nr=mysqli_fetch_array($sq4);
       $nm=mysqli_fetch_array($sq5);
       $ns=mysqli_fetch_array($sq6);
@@ -436,7 +436,7 @@ if(isset($_POST['update']))
 
 
       $i++;
-      $demo="demo"+"$i";
+      $demo="demo".$i;
       $nr=mysqli_fetch_array($sq4);
       $nm=mysqli_fetch_array($sq5);
       $ns=mysqli_fetch_array($sq6);
@@ -563,7 +563,7 @@ if(isset($_POST['delete']))
 
 
       $i++;
-      $demo="demo"+"$i";
+      $demo="demo".$i;
       $nr=mysqli_fetch_array($sq4);
       $nm=mysqli_fetch_array($sq5);
       $ns=mysqli_fetch_array($sq6);
@@ -680,7 +680,7 @@ if(!isset($_POST['cn']) && !isset($_POST['update']) && !isset($_POST['delete']))
 
 
       $i++;
-      $demo="demo"+"$i";
+      $demo="demo".$i;
       $nr=mysqli_fetch_array($sq4);
       $nm=mysqli_fetch_array($sq5);
       $ns=mysqli_fetch_array($sq6);
