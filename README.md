@@ -71,7 +71,7 @@ $pass="";
 $db="reg";
 
 ```
-# More
+# Windows OS Version
 There is a windows version of this online judge with partial features. 
 https://github.com/shawon100/RUET-Virtual-Lab
 
