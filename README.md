@@ -1,6 +1,6 @@
 # RUET-OJ
 
-[RUET OJ](http://ruetoj-ruetoj.1d35.starter-us-east-1.openshiftapps.com/) is the 1st Open Source Online Judge 
+[RUET OJ](http://ruetoj-ruetoj.apps.us-east-1.starter.openshift-online.com/l) is the 1st Open Source Online Judge 
 Platform Of Bangladesh .
 
 
@@ -12,7 +12,7 @@ Platform Of Bangladesh .
 
 # Live RUET-OJ 
 
-http://ruetoj-ruetoj.1d35.starter-us-east-1.openshiftapps.com/
+http://ruetoj-ruetoj.apps.us-east-1.starter.openshift-online.com/l
 
 
 # Languages
