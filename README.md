@@ -71,6 +71,12 @@ $pass="";
 $db="reg";
 
 ```
+# Change Permission
+```
+chmod -R 777 RUET-OJ
+
+```
+
 # Windows OS Version
 There is also a windows version of this online judge with partial features. 
 https://github.com/shawon100/RUET-Virtual-Lab
