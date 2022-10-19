@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+spec:
+  selector:
+    app: webapp-sql
+    tier: backend
+  ports:
+  - protocol: "TCP"
+    port: 3306
+    targetPort: 3306
+  clusterIP: None
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: sqldb
+  labels:
+    app: webapp-sql
+    tier: backend
+spec:
+  selector:
+    matchLabels:
+      app: webapp-sql
+      tier: backend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: webapp-sql
+        tier: backend
+    spec:
+      containers:
+      - image: mysql
+        name: mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        - name: MYSQL_DATABASE
+          value: roj
+        - name: MYSQL_USER
+          value: db_user
+        - name: MYSQL_PASSWORD
+          value: password
+        args: ["--default-authentication-plugin=mysql_native_password"]
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim

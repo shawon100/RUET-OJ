@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ojapp-service
+spec:
+  selector:
+    app: webapp-oj
+    tier: frontend
+  ports:
+  - protocol: "TCP"
+    port: 80
+    targetPort: 80
+  type: NodePort
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ojapp
+  labels:
+    app: webapp-oj
+    tier: frontend
+spec:
+  selector:
+    matchLabels:
+      app: webapp-oj
+      tier: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: webapp-oj
+        tier: frontend
+    spec:
+      containers:
+      - name: webapp1
+        image: shawon10/ruetoj
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

@@ -1,6 +1,6 @@
 # RUET-OJ
 
-[RUET OJ](http://ruetoj-ruetoj.apps.us-east-1.starter.openshift-online.com/) is the 1st Open Source Online Judge 
+[RUET OJ](https://oj.redlimesolutions.ml/) is the 1st Open Source Online Judge 
 Platform Of Bangladesh .
 
 
@@ -12,7 +12,7 @@ Platform Of Bangladesh .
 
 # Live RUET-OJ 
 
-http://ruetoj-ruetoj.apps.us-east-1.starter.openshift-online.com/
+https://oj.redlimesolutions.ml
 
 
 # Languages
@@ -40,6 +40,7 @@ Linux, gcc, g++ , Java Compilers And Lampp
 C/C++
 ```
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+echo "deb http://ftp.us.debian.org/debian/ jessie main contrib non-free" >>  /etc/apt/sources.list.d/toolchain.list
 sudo apt-get update
 sudo apt-get install g++-4.9
 
@@ -84,5 +85,34 @@ https://github.com/shawon100/RUET-Virtual-Lab
 # Request
 This online judge project is for learning purpose. Do not use it for commercial purpose. If you modify credits of footer, then add this github repository link to footer.
 
-# Deploy Online
+# Deploy Online (Openshift)
 See this Video: https://www.youtube.com/watch?v=DGMptYjhGF4
+
+# Deploy in Local Kubernetes
+
+```
+Go to deployments folder
+cd deployments
+kubectl apply -f .
+Exec into MySQL Pod
+kubectl exec -it pod-name bash
+mysql -u root -p roj
+Import reg.sql from dbs folder (Just Run the Queries using Copy and Paste)
+Then check the service and nodeport on your local kubernetes
+http://kubernetes-master-ip:NodePort
+
+```
+
+# Deploy in Cloud Kubernetes
+
+```
+Install Nginx Ingress Controller
+Resource: https://www.shawonruet.com/2022/08/deploy-sample-live-angular-frontend.html
+cd deployments
+kubectl apply -f .
+Exec into MySQL Pod
+kubectl exec -it pod-name bash
+mysql -u root -p roj
+Import reg.sql from dbs folder (Just Run the Queries using Copy and Paste)
+Check your host name from Ingress and Access
+```
