@@ -3,16 +3,16 @@ kind: Service
 metadata:
   name: mysql
 spec:
+  type: ClusterIP
   selector:
     app: webapp-sql
     tier: backend
   ports:
-  - protocol: "TCP"
+  - protocol: TCP
     port: 3306
     targetPort: 3306
-  clusterIP: None
 ---
-apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sqldb
@@ -33,7 +33,7 @@ spec:
         tier: backend
     spec:
       containers:
-      - image: mysql
+      - image: mysql:8.0 # Pinned version for stability
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
@@ -44,6 +44,13 @@ spec:
           value: db_user
         - name: MYSQL_PASSWORD
           value: password
+        resources: 
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+          requests:
+            memory: "56Mi"
+            cpu: "20m"
         args: ["--default-authentication-plugin=mysql_native_password"]
         ports:
         - containerPort: 3306
