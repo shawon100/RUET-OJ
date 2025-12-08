@@ -1,7 +1,7 @@
 # RUET-OJ
 
-[RUET OJ](https://oj.redlimesolutions.ml/) is the 1st Open Source Online Judge 
-Platform Of Bangladesh .
+[RUET OJ](https://oj.aimlyfy.com/) is the 1st Open Source Online Judge 
+Platform Of Bangladesh.
 
 
 
