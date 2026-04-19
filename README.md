@@ -12,7 +12,7 @@ Platform Of Bangladesh.
 
 # Live RUET-OJ 
 
-https://oj.redlimesolutions.ml
+[https://oj.aimlyfy.com](https://oj.aimlyfy.com)
 
 
 # Languages
